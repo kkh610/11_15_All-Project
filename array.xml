@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="resId">
+        <item>@drawable/array_xml_image1</item>
+
+        <item>
+
+        </item>
+
+    </integer-array>
+
+    <string-array name="title">
+        <item>모든 순간이 너였다.</item>
+        <item>사막</item>
+    </string-array>
+
+    <string-array name="content">
+        <item>하태완</item>
+        <item>황량한 사막입니다.</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/fabListView"
+        android:layout_width="match_parent"
+        android:layout_height="587dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F44336"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="북다방"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="검색어를 입력하세요."
+                android:inputType="textPersonName"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="로그인" />
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="회원가입" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bookButton"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Book" />
+
+            <Button
+                android:id="@+id/audioButton"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AudioBook" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bestRankButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="베스트셀러" />
+
+                        <Button
+                            android:id="@+id/genre1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="소설" />
+
+                        <Button
+                            android:id="@+id/genre2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="시/에세이" />
+
+                        <Button
+                            android:id="@+id/genre3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="자기계발" />
+
+                        <Button
+                            android:id="@+id/genre4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="인문" />
+
+                        <Button
+                            android:id="@+id/genre5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="예술" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/bookListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/audioListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/bestRankListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        app:layout_anchor="@id/fabListView"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/mapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="MAP" />
+
+        <Button
+            android:id="@+id/gameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="GAME" />
+
+        <Button
+            android:id="@+id/myPageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="MyPage" />
+    </LinearLayout>
+
+</LinearLayout>
+
